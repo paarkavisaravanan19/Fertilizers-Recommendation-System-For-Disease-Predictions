@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title> 
+    <link rel="stylesheet" href="../static/signup_style.css">
+</head>
+<body> 
+
+  <div class="top">
+    <h1 class="logo">Fertilizers Recommendation System for Disease Prediction</h1>
+  </div>
+</div>
+    <div class="signupFrm">
+    <form action="/dashboard" class="form" onsubmit="return validate()" enctype="multipart/form-data" method="post">
+      <h1 class="title">LOGIN</h1>
+
+      <div class="inputContainer">
+        <input type="text" class="input" placeholder="Enter email" id="email" required>
+        <label for="email" class="label">Email</label>
+      </div>
+
+
+      <div class="inputContainer">
+        <input type="password" class="input" placeholder="Enter password" id="psw" required>
+        <label for="psw" class="label">Password</label>
+      </div>
+
+      <button type="submit" class="signupbtn" value="Sign up" >LOGIN</button>
+    </form>
+  </div>
+
+
+    <div id="background-wrap">
+    <div class="bubble x1"></div>
+    <div class="bubble x2"></div>
+    <div class="bubble x3"></div>
+    <div class="bubble x4"></div>
+    <div class="bubble x5"></div>
+    <div class="bubble x6"></div>
+    <div class="bubble x7"></div>
+    <div class="bubble x8"></div>
+    <div class="bubble x9"></div>
+    <div class="bubble x10"></div>
+</div>
+
+<script>
+  function validate(){
+    var email=document.getElementById("email").value;
+    var pword=document.getElementById("psw").value;
+    
+    
+      if(email.match(/^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/)){
+        if(pword.length>8 &&pword.length<12){
+          window.location.replace("upload.html")
+        }
+        else{
+          alert("password small")
+        }
+      }
+      else{
+        alert("invalid email")
+      }
+    }
+    
+  
+</script>
+</body>
+</html>
